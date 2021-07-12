@@ -2,11 +2,10 @@
 *{margin:0;padding:0}
 body{font-family: 'Poppins', sans-serif !important; transition:all 0.5s ease;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease; background-color: #E5E5E5;}
 body, html{height:100%;}
-img{max-width:100%}
 a{text-decoration:none}
 a:hover{text-decoration:none}
 h1, h2, h3, h4, h5, h6{font-weight:normal;margin-top:10px;margin-bottom:10px;}
-p{line-height: 150%;margin-bottom: 2em;}
+p{line-height: 150%;margin-bottom: 1em;}
 .container_full {width: 100%; height: auto;}
 .container {width:960px; margin:0 auto; display:block; background-color: #FFF; }
 .fix{overflow:hidden;}
@@ -16,20 +15,26 @@ p{line-height: 150%;margin-bottom: 2em;}
 /**start **/
 
 /* start player section */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .top-players{
     padding: 13px;
+    margin-bottom: 20px;
 }
-.player-title{
+.section-title{
     font-size: 30px;
 }
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap:30px;
 }
 .player{
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
 }
 .player img{
     width: 65px;
@@ -39,4 +44,82 @@ p{line-height: 150%;margin-bottom: 2em;}
     font-size: 18px;
     margin-left: 13px;
 }
+hr{
+    border: 1px solid #D1D1D1;
+}
 /* end player section */
+
+/* start blog setion */
+
+.top-blog{
+    padding: 13px;
+}
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+}
+.blog{
+    display: flex;
+}
+.blog-info{
+    margin-left: 10px;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info .blog-title{
+    font-size: 20px;
+    color:#000000;
+}
+.blog-info .blog-authore{
+    font-size: 16px;
+    color:#9F9F9F;
+}
+.blog-info .blog-authore a{
+    color: #562EFF;
+}
+/* end blog section */
+
+/* start course section */
+
+.courses-full{
+    margin:10px;
+    padding-bottom: 30px;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    padding: 3px;
+    box-shadow: 1px 2px 7px #dddddda3;
+}
+.course .course-thumnail img{
+    width:266px;
+    height: 141px;
+}
+.course .course-detaill h2{
+    font-size: 20px;
+    color: #1E1E1E;
+}
+.course .course-detaill p{
+    font-size: 14px;
+    color: #ED6B4F;
+}
+.cours-info{
+    display: flex;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.course .cours-info .fas.filld{
+    color: #FFC014;
+}
+.course .cours-info .fas.empty{
+    color: #AEAEAE;
+}
+/* end course section */
